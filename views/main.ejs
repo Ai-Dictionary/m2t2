@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="m2t2">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Ai-Dictionary/m2t2/main/public/logo1500.png" name="og:image">
+    <meta itemprop="image" content="https://m2t2.vercel.app/public/logo1500.png">
+    <meta property="og:site_name" content="m2t2">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/Ai-Dictionary/m2t2/main/public/logo1500.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="m2t2">
+    <meta name="description" content="MockMantra TimeTable is an AI-powered education platform offering doubt solving, live classes, exam prep, career guidance, and progress tracking for students, teachers, and parents.">
+    <meta content="M2T2, MockMantra TimeTable, time scheduler, super ai, mock mantra, table, progress track, project, JPEN, Ai Dictionary" lang="en-us" name="keywords">
+    <title version="1.0">M2T2</title>
+    <meta name="author" content="Ai-Dictionary">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/Ai-Dictionary/m2t2/main/public/favicon.ico">
+    <link rel="icon" href="https://mockmantra.in/static/media/wl_client_images/50635ffb95b540c0862b89a3b8325031.png" sizes="192x192">
+    <link rel="alternate" type="application/rss+xml" title="MockMantraTimeTable » Feed" href="https://m2t2.com/feed/">
+    <link rel="alternate" type="application/rss+xml" title="MockMantraTimeTable » Comments Feed" href="https://m2t2.com/comments/feed/">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/App.css"/>
+    <% if (isHosted) { %>
+        <link rel="stylesheet" href="https://ai-dictionary.github.io/m2t2/assets/styles/main.css"/>
+    <% } else { %>
+        <link rel="stylesheet" href="../assets/styles/main.css"/>
+    <% } %>
+</head>
+<body>
+    <main class="workspace">
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <a class="header-logo">
+                    <img src="../public/logo1500.png" alt="M2T2" />
+                </a>
+            </header>
+            <nav class="sidebar-nav">
+                <ul class="nav-list primary-nav">
+                    <li class="nav-item" onclick="loadPage('general');">
+                        <a  class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-columns-gap" viewBox="0 0 16 16">
+                                <path
+                                    d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z" />
+                            </svg>
+                            <span class="nav-label">General</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" onclick="loadPage('calender');">
+                        <a  class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-month" viewBox="0 0 16 16">
+                                <path d="M2.56 11.332 3.1 9.73h1.984l.54 1.602h.718L4.444 6h-.696L1.85 11.332zm1.544-4.527L4.9 9.18H3.284l.8-2.375zm5.746.422h-.676V9.77c0 .652-.414 1.023-1.004 1.023-.539 0-.98-.246-.98-1.012V7.227h-.676v2.746c0 .941.606 1.425 1.453 1.425.656 0 1.043-.28 1.188-.605h.027v.539h.668zm2.258 5.046c-.563 0-.91-.304-.985-.636h-.687c.094.683.625 1.199 1.668 1.199.93 0 1.746-.527 1.746-1.578V7.227h-.649v.578h-.019c-.191-.348-.637-.64-1.195-.64-.965 0-1.64.679-1.64 1.886v.34c0 1.23.683 1.902 1.64 1.902.558 0 1.008-.293 1.172-.648h.02v.605c0 .645-.423 1.023-1.071 1.023m.008-4.53c.648 0 1.062.527 1.062 1.359v.253c0 .848-.39 1.364-1.062 1.364-.692 0-1.098-.512-1.098-1.364v-.253c0-.868.406-1.36 1.098-1.36z"/>
+                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                            </svg>
+                            <span class="nav-label">Calender</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" onclick="loadPage('teacher');">
+                        <a  class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
+                                <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917zM8 8.46 1.758 5.965 8 3.052l6.242 2.913z"/>
+                                <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46z"/>
+                            </svg>
+                            <span class="nav-label">Student/Teacher</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" onclick="loadPage('profile');">
+                        <a  class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                            </svg>
+                            <span class="nav-label">Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <section class="page" id="page-content">
+                
+        </section>
+        <template class="default-tamplete" id="general-template"><%- typeof(general)!='undefined'?general:'undefined' %></template>
+    </main>
+</body>
+<script src="../static/App.js" nonce="<%= nonce %>"></script>
+<script type="application/ld+json" nonce="<%= nonce %>">
+{
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "M2T2",
+    "url": "https://m2t2.mockmantra.in",
+    "logo": "https://m2t2.vercel.app/public/logo1500.png",
+    "description": "AI-powered education platform offering time table and class schedule."
+}
+</script>
+<% if (isHosted) { %>
+    <script src="https://ai-dictionary.github.io/m2t2/assets/scripts/main.js" nonce="<%= nonce %>"></script>
+<% } else { %>
+    <script src="../assets/scripts/main.js" nonce="<%= nonce %>"></script>
+<% } %>
+<script nonce="<%= nonce %>">
+    window.isHosted = "<%= isHosted %>";
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>

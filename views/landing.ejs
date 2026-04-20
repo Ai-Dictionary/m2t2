@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="m2t2">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Ai-Dictionary/m2t2/main/public/logo1500.png" name="og:image">
+    <meta itemprop="image" content="https://m2t2.vercel.app/public/logo1500.png">
+    <meta property="og:site_name" content="m2t2">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/Ai-Dictionary/m2t2/main/public/logo1500.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="m2t2">
+    <meta name="description" content="MockMantra TimeTable is an AI-powered education platform offering doubt solving, live classes, exam prep, career guidance, and progress tracking for students, teachers, and parents.">
+    <meta content="M2T2, MockMantra TimeTable, time scheduler, super ai, mock mantra, table, progress track, project, JPEN, Ai Dictionary" lang="en-us" name="keywords">
+    <title version="1.0">M2T2</title>
+    <meta name="author" content="Ai-Dictionary">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/Ai-Dictionary/m2t2/main/public/favicon.ico">
+    <link rel="icon" href="https://mockmantra.in/static/media/wl_client_images/50635ffb95b540c0862b89a3b8325031.png" sizes="192x192">
+    <link rel="alternate" type="application/rss+xml" title="MockMantraTimeTable » Feed" href="https://m2t2.com/feed/">
+    <link rel="alternate" type="application/rss+xml" title="MockMantraTimeTable » Comments Feed" href="https://m2t2.com/comments/feed/">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/App.css"/>
+    <% if (isHosted) { %>
+        <link rel="stylesheet" href="https://ai-dictionary.github.io/m2t2/assets/styles/landing.css"/>
+    <% } else { %>
+        <link rel="stylesheet" href="../assets/styles/landing.css"/>
+    <% } %>
+</head>
+<body>
+    <main class="workspace">
+        <section class="subpage gradient_page flx">
+            <div class="component left-component flx">
+                <% if (isHosted) { %>
+                    <img src="https://ai-dictionary.github.io/m2t2/assets/images/girl.png" alt="m2t2" loading="lazy" />
+                <% } else { %>
+                    <img src="../assets/images/girl.png" alt="m2t2" loading="lazy" />
+                <% } %>
+            </div>
+            <div class="component right-component accessIntro">
+                <div class="labeling">
+                    <img src="../public/favicon.ico" alt="m2t2"/>
+                    <p>MOCK MANTRA</p>
+                </div>
+                <h2>Thrilled to Join Your Learning <strong>Journey!</strong></h2>
+                <p>Excited to join your journey, making learning. easy and fun as we reach goals together.</p>
+                <div class="btn-holder flx" onclick="accessContent();">
+                    <div class="checkmark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
+                        </svg>
+                    </div>
+                    <div class="text">Continue</div>
+                    <div class="arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
+                            <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
+                            <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
+                            <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="component right-component accessContent">
+                <div class="labeling">
+                    <img src="../public/favicon.ico" alt="m2t2"/>
+                    <p>MOCK MANTRA</p>
+                </div>
+                <div class="usertypelist">
+                    <div class="usertype flx">
+                        <div class="img">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backpack3" viewBox="0 0 16 16">
+                                <path d="M4.04 7.43a4 4 0 0 1 7.92 0 .5.5 0 1 1-.99.14 3 3 0 0 0-5.94 0 .5.5 0 1 1-.99-.14M4 9.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm1 .5v3h6v-3h-1v.5a.5.5 0 0 1-1 0V10z"/>
+                                <path d="M6 2.341V2a2 2 0 1 1 4 0v.341c.465.165.904.385 1.308.653l.416-1.247a1 1 0 0 1 1.748-.284l.77 1.027a1 1 0 0 1 .15.917l-.803 2.407C13.854 6.49 14 7.229 14 8v5.5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5V8c0-.771.146-1.509.41-2.186l-.802-2.407a1 1 0 0 1 .15-.917l.77-1.027a1 1 0 0 1 1.748.284l.416 1.247A6 6 0 0 1 6 2.34ZM7 2v.083a6 6 0 0 1 2 0V2a1 1 0 1 0-2 0m5.941 2.595.502-1.505-.77-1.027-.532 1.595q.447.427.8.937M3.86 3.658l-.532-1.595-.77 1.027.502 1.505q.352-.51.8-.937M8 3a5 5 0 0 0-5 5v5.5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5V8a5 5 0 0 0-5-5"/>
+                            </svg>
+                        </div>
+                        <div class="username">
+                            <div class="name">Student</div>
+                            <div class="support">I want to continue as a Student!</div>
+                        </div>
+                    </div>
+                    <div class="usertype flx">
+                        <div class="img">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
+                                <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917zM8 8.46 1.758 5.965 8 3.052l6.242 2.913z"/>
+                                <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46z"/>
+                            </svg>
+                        </div>
+                        <div class="username">
+                            <div class="name">Teacher</div>
+                            <div class="support">I want to continue as a Teacher!</div>
+                        </div>
+                    </div>
+                    <div class="usertype flx">
+                        <div class="img">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
+                            </svg>
+                        </div>
+                        <div class="username">
+                            <div class="name">Admin</div>
+                            <div class="support">Unfortunately, I am an Admin, so let's do nothing!!</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn btn-primary" onclick="accessLogin();">
+                    Continue <span class="utype"></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="component right-component accessLogin">
+                <div class="labeling">
+                    <img src="../public/favicon.ico" alt="m2t2"/>
+                    <p>MOCK MANTRA</p>
+                </div>
+                <div class="log-from">
+                    <h3>Welcome to M2T2</h3>
+                    <h5>Login to your account</h5>
+                    <div class="form-group mb-3">
+                        <input type="email" class="form-control" id="useremail" placeholder="Enter User Id or Email Id" required/>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="password" class="form-control" id="userpassword" placeholder="Enter Password" required/>
+                    </div>
+                    <div class="form-group mb-3">
+                        <select class="form-select form-control" aria-label="Disabled select" id="usertype" disabled>
+                            <option value="student" selected>Student</option>
+                            <option value="teacher">Teacher</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                    <div class="btn btn-process btn-lg btn-block" id="login" onclick="login();">Login</div>
+                    <div class="helping flx"><span onclick="accessContent();">Back to User Type Select</span><span onclick="route('/forgot_password');">Forgot Password</span></div>
+                    <div class="error"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="../static/App.js" nonce="<%= nonce %>"></script>
+<script type="application/ld+json" nonce="<%= nonce %>">
+{
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "M2T2",
+    "url": "https://m2t2.mockmantra.in",
+    "logo": "https://m2t2.vercel.app/public/logo1500.png",
+    "description": "AI-powered education platform offering time table and class schedule."
+}
+</script>
+<% if (isHosted) { %>
+    <script src="https://ai-dictionary.github.io/m2t2/assets/scripts/landing.js" nonce="<%= nonce %>"></script>
+<% } else { %>
+    <script src="../assets/scripts/landing.js" nonce="<%= nonce %>"></script>
+<% } %>
+<script nonce="<%= nonce %>">
+    window.isHosted = "<%= isHosted %>";
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>

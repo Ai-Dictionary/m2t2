@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+header{
+    zoom: 0.9;
+}
+.workspace {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+.subpage {
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    position: relative;
+    user-select: none;
+}
+.subpage:nth-child(1){
+    user-select: none;
+    .component{
+        width: 100%;
+        height: 100%;
+    }
+    .left-component{
+        width: 40%;
+        height: 100%;
+        background: #f0f5b6; /*#F2ECE9;*/
+        background-image: url('../images/preloader.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        img{
+            width: 80%;
+            margin: auto 10% 0px 10%;
+        }
+    }
+    .right-component{
+        width: 60%;
+        height: 100%;
+        background-color: #fff;
+        .labeling{
+            margin-top: 5%;
+            img{
+                width: 4%;
+                margin: 20px 48% 4px 48%;
+            }
+            p{
+                font-size: 0.7rem;
+                padding: 0px;
+            }
+        }
+        h2{
+            width: 100%;
+            margin-top: 20%;
+            font-size: 2.5rem;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        p{
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 8px 15%;
+            color: darkgrey;
+        }
+        .btn-holder{
+            background: #E7E7E7;
+            width: 40%;
+            margin: 10% auto;
+            padding: 4px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            .checkmark{
+                width: 64px;
+                height: 64px;
+                background: #fff;
+                text-align: center;
+                border-radius: 50%;
+                svg{
+                    --size: 30px;
+                    width: var(--size);
+                    height: var(--size);
+                    margin: calc((100% - var(--size)) / 2) 0px;
+                }
+            }
+            .text{
+                padding: 20px 0px;
+            }
+            .arrow{
+                width: 30%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                svg:nth-child(1){
+                    color: #c9c9c9;
+                }
+                svg:nth-child(2){
+                    color: #7A7A7A;
+                }
+                svg:nth-child(3){
+                    color: #474747;
+                }
+            }
+        }
+    }
+    .right-component.accessContent{
+        display: none;
+        .usertypelist{
+            width: 80%;
+            margin: 10% auto;
+            .usertype{
+                width: 100%;
+                margin: 30px 0px;
+                background: #E7E7E7;
+                border-radius: 50px;
+                padding: 4px;
+                cursor: pointer;
+                transition: all 1s ease-in-out;
+                .img{
+                    width: 70px;
+                    height: 70px;
+                    background: #fff;
+                    border-radius: 50%;
+                    text-align: center;
+                    transition: all 1s ease-in-out;
+                    svg{
+                        margin-top: -15%;
+                        width: 24px;
+                        height: 24px;
+                        margin-top: 10%;
+                    }
+                }
+                .username{
+                    width: 85%;
+                    padding: 10px 0px;
+                    font-size: 16px;
+                    font-family: sans-serif;
+                    font-weight: 600;
+                    .support{
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: grey;
+                    }
+                }
+            }
+        }
+        .btn-primary{
+            width: 80%;
+            margin: 10px 10%;
+            border-radius: 50px;
+            padding: 20px 0px;
+            background-color: #f0f5b6;
+            border-color: #f0f5b6;
+            color: slategray;
+            font-weight: 600;
+        }
+        .choosentype{
+            border: 1px solid #E7E7E7;
+            background: #fff!important;
+            .img{
+                background: #f0f5b6!important;
+                color: #fff;
+            }
+        }
+    }
+    .right-component.accessLogin{
+        display: none;
+        .log-from{
+            width: 80%;
+            margin: 20px auto;
+            background: #f0f5b6bb;
+            border-radius: 10px;
+            font-family: sans-serif;
+            padding: 30px 30px;
+            h3{
+                font-weight: bold;
+                user-select: none;
+                font-size: 1.5rem;
+            }
+            h5{
+                margin-bottom: 50px;
+                font-size: 1rem;
+            }
+            .mb-3{
+                margin-bottom: 2rem!important;
+            }
+            .form-control{
+                height: calc(1.5em + 1.25rem + 2px)!important;
+                padding: .67rem .75rem!important;
+            }
+            .helping{
+                margin: 10px 0px;
+                padding: 10px;
+                user-select: none;
+                span{
+                    font-size: 16px;
+                    font-family: sans-serif;
+                    color: #272b2f;
+                    cursor: pointer;
+                }
+            }
+            .error{
+                display: none;
+                color: red;
+                font-size: 16px;
+                margin: 0px 5px;
+                font-family: consolas;
+            }
+        }
+    }
+}
+.gradient_page{
+    background: linear-gradient(100deg, #E9EBFC, #EAEAFB, #F8EEE9);
+    background: var(--bg-color);
+}
+
+/* Mobile view */
+@media only screen and (max-width: 900px), only screen and (min-width: 900px) and (max-width: 1200px) {
+    .subpage:nth-child(1) {
+        .left-component{
+            display: none;
+        }
+        .right-component.accessIntro{
+            width: 100%;
+            .labeling{
+                display: none;
+            }
+            h2{
+                margin-top: 5%;
+                font-size: 2.2rem;
+            }
+            p{
+                padding: 8px 5%;
+                font-size: 1rem;
+            }
+            .btn-holder{
+                width: 80%;
+            }
+        }
+        .right-component.accessLogin{
+            width: 100%;
+            .labeling {
+                margin-top: -2%;
+            }
+            .log-from {
+                width: 95%;
+                .helping span{
+                    font-size: 12px;
+                }
+                .error {
+                    font-size: 14px;
+                }
+            }
+        }
+        .right-component.accessContent{
+            /* display: block; */
+            width: 100%;
+            .usertypelist{
+                width: 95%;
+                .usertype {
+                    .img{
+                        width: 80px;
+                        height: 80px;
+                        svg{
+                            margin-top: 20px;
+                        }
+                    }
+                    .username{
+                        width: 75%;
+                        font-size: 14px;
+                        .support{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+/* Desktop view */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .subpage:nth-child(1) {
+        .left-component{
+            display: flex;
+            background-size: cover;
+            background-position: 50% 10%;
+            img{
+                width: fit-content;
+                height: fit-content;
+                margin: 0px 0px 0px -50%;
+                margin-top: inherit;
+            }
+        }
+        .right-component.accessLogin{
+            width: 60%;
+        }
+    }
+}
+
+/* Tab view */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .subpage:nth-child(1) {
+        background-color: transparent;
+    }
+}

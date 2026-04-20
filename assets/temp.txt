@@ -1,0 +1,31 @@
+Student
+
+1. name
+2. email
+3. phone number
+4. class
+5. gender
+6. board
+7. password
+8. 
+
+Teacher
+
+1. name
+2. gender
+3. email
+4. phone number
+5. subject
+6. password
+7. 
+
+Relation
+
+1. S_email
+2. T_email
+3. S_name
+4. T_name
+5. subject
+6. Date - Time - Location []
+7. 
+

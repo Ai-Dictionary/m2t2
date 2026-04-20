@@ -1,0 +1,19 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light "><!-- bg-light -->
+        <a class="navbar-brand" href="/"><img src="https://mockmantra.in/static/media/wl_client_images/f49d14eb9f274d71ba00522f125aa6ff.png" alt="m2t2"></a>
+    
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <% if (typeof displayMode === 'object' && displayMode.name.length <= 2) { %>
+                    <li class="nav-item user-dp" <%- `style="background: ${displayMode.bg || '#eee'};"` %> onclick="route('/dashboard?page=profile');">
+                        <div title="View Profile, <%= displayMode.id %>"><%= displayMode.name %></div>
+                    </li>
+                <% } else { %>
+                    <li class="nav-item">
+                        <div class="btn btn-outline-dark" onclick="route('/signup');">Create your account</div>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </nav>
+</header>
