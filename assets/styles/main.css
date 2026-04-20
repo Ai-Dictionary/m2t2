@@ -141,10 +141,20 @@
 
 /* Desktop view */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    
+    .workspace {
+        .sidebar {
+            top: 50vh;
+            left: 35%;
+        }
+    }
 }
 
 /* Tab view */
 @media only screen and (min-width: 481px) and (max-width: 767px) {
-    
+    .workspace {
+        .sidebar {
+            bottom: 10%;
+            left: 25%;
+        }
+    }
 }

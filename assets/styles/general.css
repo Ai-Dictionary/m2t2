@@ -50,10 +50,11 @@
                     border: 1px solid black;
                 }
                 .dp{
-                    width: 140px;
-                    height: 140px;
-                    margin: calc((100% - 140px) / 2);
-                    margin-top: calc(calc((100% - 140px) / 2) - 10px);
+                    --size: 140px;
+                    width: var(--size);
+                    height: var(--size);
+                    margin: calc((100% - var(--size)) / 2);
+                    margin-top: calc(calc((100% - var(--size)) / 2) - 10px);
                     padding: 10% 0px;
                     text-align: center;
                     background: lightgray;
@@ -130,6 +131,9 @@
                             width: 75px;
                             max-width: 85px;
                             justify-content: space-between;
+                            .t-date,.t-location{
+                                margin-top: 1px;
+                            }
                         }
                     }
                 }
@@ -146,6 +150,130 @@
                         margin-top: 8%;
                         margin-left: 2px;
                         width: 130%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Mobile view */
+@media only screen and (max-width: 900px), only screen and (min-width: 900px) and (max-width: 1200px) {
+    .analysis{
+        .header-intro{
+            flex-direction: column;
+            .left-component, .right-component{
+                width: 100%;
+                height: fit-content;
+            }
+            .left-component{
+                .user-info{
+                    padding: 4px 10px;
+                    h1{
+                        font-size: 2rem;
+                    }
+                    p{
+                        font-size: 12px;
+                    }
+                }
+                .user-dp{
+                    .dp{
+                        --size: 100px;
+                        width: var(--size);
+                        height: var(--size);
+                        margin: calc((100% - var(--size)) / 2);
+                        font-size: 45px;
+                    }
+                }
+            }
+            .right-component{
+                .to-class-info{
+                    width: 95%;
+                    margin: 2% auto;
+                    max-height: 160px;
+                    overflow: hidden;
+                    .left-class-info {
+                        .btn-holder {
+                            .checkmark{
+                                width: 35px;
+                                height: 35px;
+                                svg{
+                                    --size: 20px;
+                                }
+                            }
+                            .text{
+                                font-size: 12px;
+                                padding: 8px 0px;
+                            }
+                        }
+                        .t-info {
+                            .btn{
+                                width: 80px;
+                                svg{
+                                    width: 14px;
+                                    height: 14px;
+                                }
+                            }
+                        }
+                    }
+                    .right-class-info{
+                        img{
+                            width: 150%;
+                            margin-top: 5%;
+                            margin-left: -12%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Desktop view */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .analysis {
+        .header-intro {
+            flex-direction: row;
+            .right-component {
+                .to-class-info {
+                    .right-class-info {
+                        img{
+                            margin-top: -5%;
+                            margin-left: -14%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Tab view */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .analysis {
+        .header-intro {
+            width: 95%;
+            margin: 20px auto;
+            .left-component {
+                .user-dp {
+                    .dp {
+                        margin: 0px calc((100% - var(--size)) / 2);
+                        padding: 6% 0px;
+                    }
+                }
+            }
+            .right-component {
+                .to-class-info {
+                    .left-class-info{
+                        padding-right: 10%;
+                    }
+                    .right-class-info {
+                        img{
+                            width: 120%;
+                            margin-left: 10%;
+                            margin-top: -4%;
+                        }
                     }
                 }
             }
