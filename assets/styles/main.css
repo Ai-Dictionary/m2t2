@@ -71,6 +71,7 @@
 .sidebar-nav .nav-item:is(:hover, .open)>.nav-link:not(.dropdown-title) {
     color: #151A2D;
     background: #f0f5b6;
+    border-radius: 50%;
 }
 
 .sidebar .nav-link .nav-label {
@@ -116,7 +117,7 @@
     .sidebar{
         position: absolute;
         bottom: 2%;
-        left: 10%;
+        left: 15%;
         width: max-content!important;
         height: 50px;
         overflow: hidden;
@@ -135,6 +136,9 @@
         }
         .nav-link .nav-label{
             display: none;
+        }
+        .sidebar-nav .nav-item .nav-link{
+            padding: 12px;
         }
     }
 }

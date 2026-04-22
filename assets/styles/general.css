@@ -155,6 +155,23 @@
             }
         }
     }
+    .timeline-intro{
+        width: 95%;
+        margin: 20px auto;
+        .header{
+            h3{
+                font-size: 1rem;
+                text-align: left;
+            }
+            select{
+                width: fit-content;
+                border-radius: 50px;
+                font-size: 14px;
+                font-weight: 500;
+                border: none;
+            }
+        }
+    }
 }
 
 /* Mobile view */
