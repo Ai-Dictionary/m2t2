@@ -141,7 +141,7 @@ function signup(){
                     isValid = false;
                 }else{
                     const id = field.id;
-                    const value = field.value.trim();
+                    const value = id=='subject'?Array.from(document.getElementById(id).selectedOptions).map(opt => opt.value):field.value.trim();
                     if(id){
                         formData[id] = value;
                     }
@@ -166,6 +166,7 @@ function signup(){
             delete formData.confirmPassword;
             formData.accountType = userType;
             formData.status = "active";
+            formData.dob = "15-08-1947";
             await make_request_to_signup(formData);
         })();
     }else{

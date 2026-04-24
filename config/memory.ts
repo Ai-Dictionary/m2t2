@@ -48,9 +48,6 @@ class MEMORY{
         this.student_id = process.env.STUDENT_ID || '';
         this.teacher_id = process.env.TEACHER_ID || '';
         this.master_id = process.env.MASTER_ID || '';
-        this.feedback_id = process.env.FEEDBACK_ID || '';
-        this.relationship_id = process.env.RELATIONSHIP_ID || '';
-        this.iem_id = "1cskn1rWinX0-X9s50d9Qs_TEfQgtbUPzfqxm_9ZyITM";
         this.public_key = String(process.env.PUBLIC_KEY) || '';
         this.secret = security.substitutionDecoder(process.env.private_key, this.public_key).replace(/\\n/g, "\n") || '';
         this.email = security.substitutionDecoder(process.env.client_email, this.public_key) || '';
@@ -68,14 +65,6 @@ class MEMORY{
         }else if(this.clusterName=='master' || this.clusterName=='admin'){
             this.isUpdatable = true;
             return this.master_id;
-        }else if(this.clusterName=='feedback'){
-            this.isUpdatable = false;
-            return this.feedback_id;
-        }else if(this.clusterName=='relationship' || this.clusterName=='rate'){
-            this.isUpdatable = true;
-            return this.relationship_id;
-        }else if(this.clusterName=='iem1'){
-            return this.iem_id;
         }else{
             return '';
         }
@@ -87,10 +76,6 @@ class MEMORY{
             return security.generateTeacherId(data);
         }else if(this.clusterName=='master' || this.clusterName=='admin'){
             return security.generateAdminId(data);
-        }else if(this.clusterName=='feedback'){
-            return security.generateFeedbackId(data);
-        }else if(this.clusterName=='relationship' || this.clusterName=='rate'){
-            return security.generateRateId(data);
         }else{
             return '';
         }
@@ -141,6 +126,10 @@ class MEMORY{
             const rows = await sheet.getRows();
             
             const id = this.makeUserId(newData);
+
+            if(newData?.subject){
+                newData.subject = newData.subject.toLocaleString();
+            }
             
             const isDuplicate = rows.some(row => {
                 if(['rate', 'relationship'].includes(this.clusterName)){

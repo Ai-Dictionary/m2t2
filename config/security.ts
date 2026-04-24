@@ -205,7 +205,7 @@ module.exports = {
         const contactSum = contact.toString().split("").reduce((sum, digit) => sum + parseInt(digit), 0);
         const n = contactSum.toString().slice(-1);
 
-        const s = (subject.trim()[0].toUpperCase().charCodeAt(0) - 64).toString().padStart(2, "0");
+        const s = (subject[0].trim()[0].toUpperCase().charCodeAt(0) - 64).toString().padStart(2, "0");
 
         const dd = String(module.exports.getTodayDate()).split("-")[0];
 

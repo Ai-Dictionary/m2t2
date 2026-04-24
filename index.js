@@ -277,6 +277,31 @@ app.get('/varchar', (req, res) => {
     res.status(200).json(varchar);
 });
 
+app.post('/create_account', async (req, res) => {
+    const profile_info = req.body.info;
+    try{
+        let memory = new Memory();
+        if(profile_info.type == 'student'){
+            memory.clusterName = 'student';
+        }else if(profile_info.type == 'teacher'){
+            memory.clusterName = 'teacher';
+        }else{
+            return null;
+        }
+        let work = await memory.write(profile_info.details);
+        if(work?.id){
+            res.status(200).json({'id': work.id});
+        }else if(work?.status){
+            res.status(200).json({'message': jsonfile.readFileSync('./config/error_log.json')[work.status]});
+        }else{
+            res.status(200).json({'message': 'Profile is not create due to some error, please try again later'});
+        }
+    }catch(e){
+        console.log("Oops! you make some mistake to create a profile\n\n", e);
+        return null;
+    }
+});
+
 app.get('/main', async (req, res) => {
     try{
         const nonce = res.locals.nonce;
