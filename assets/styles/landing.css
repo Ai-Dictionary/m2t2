@@ -170,11 +170,11 @@ header{
             }
         }
     }
-    .right-component.accessLogin{
+    .right-component.accessLogin, .right-component.accessSignup{
         display: none;
-        .log-from{
+        .log-from, .signup-form{
             width: 80%;
-            margin: 20px auto;
+            margin: 10px auto;
             background: #f0f5b6bb;
             border-radius: 10px;
             font-family: sans-serif;
@@ -215,10 +215,101 @@ header{
             }
         }
     }
+    .right-component.accessSignup{
+        display: none;
+        .labeling{
+            margin-top: 2%;
+        }
+        .signup-form{
+            h5{
+                margin-bottom: 10px;
+                strong{
+                    text-transform: capitalize;
+                }
+            }
+            .title{
+                font-size: 14px;
+                margin: 10px 0px;
+                color: red;
+                font-family: consolas;
+                transition: all 1s ease-in-out;
+                animation: title-blink 0.5s linear infinite;
+            }
+            .btn-outline-secondary{
+                padding-top: 12px;
+                height: 50px;
+                overflow: hidden;
+            }
+            .form-box{
+                width: 100%;
+                max-height: 65vh;
+                overflow: scroll;
+                label {
+                    font-size: 1rem;
+                }
+                input, select, textarea{
+                    font-size: 0.8rem;
+                }
+                small{
+                    font-size: 0.6rem;
+                }
+                .row{
+                    margin-left: -10px;
+                    width: 100%;
+                }
+                .student-signup, .teacher-signup{
+                    display: none;
+                }
+                #subject{
+                    width: 100%;
+                    height: 100px !important;
+                    option{
+                        width: 100%;
+                    }
+                }
+            }   
+            .contract{
+                padding: 4px 30px; 
+                line-height: 10px;
+                small{
+                    font-weight: 600; 
+                    margin-top: 5px; 
+                    color: #343a40;
+                }
+            }
+        }
+    }
 }
 .gradient_page{
     background: linear-gradient(100deg, #E9EBFC, #EAEAFB, #F8EEE9);
     background: var(--bg-color);
+}
+@keyframes title-blink {
+    from{
+        color: red;
+    }to{
+        color: orange;
+    }
+}
+.waitpopup{
+    display: none;
+    background: #00000070;
+    position: fixed;
+    .popup{
+        width: 50%;
+        margin: 20% auto;
+        background: var(--lavender);
+        padding: 20px 20px 40px 20px;
+        border-radius: 10px;
+        text-align: center;
+        .wait-icon{
+            width: 100%;
+            img{
+                position: relative;
+                width: 80px;
+            }
+        }
+    }
 }
 
 /* Mobile view */
@@ -244,18 +335,35 @@ header{
                 width: 80%;
             }
         }
-        .right-component.accessLogin{
+        .right-component.accessLogin, .right-component.accessSignup{
             width: 100%;
             .labeling {
                 margin-top: -2%;
             }
-            .log-from {
+            .log-from, .signup-form {
                 width: 95%;
                 .helping span{
                     font-size: 12px;
                 }
                 .error {
                     font-size: 14px;
+                }
+            }
+            .signup-form{
+                padding: 30px 20px;
+                .btn-outline-secondary{
+                    svg{
+                        display: none;
+                    }
+                }
+                .form-box {
+                    .row {
+                        flex-direction: column;
+                    }
+                }
+                .contract{
+                    padding: 4px 10px;
+                    text-align: justify;
                 }
             }
         }
@@ -284,6 +392,12 @@ header{
             
         }
     }
+    .waitpopup{
+        .popup{
+            width: 95%;
+            margin: 40% auto;
+        }
+    }
 }
 
 /* Desktop view */
@@ -300,7 +414,7 @@ header{
                 margin-top: inherit;
             }
         }
-        .right-component.accessLogin{
+        .right-component.accessLogin, .right-component.accessSignup{
             width: 60%;
         }
     }

@@ -259,6 +259,7 @@ app.get('/', async (req, res) => {
     const nonce = res.locals.nonce;
     const isHosted = hex.isHosted(req);
     let header;
+    const signup = await ejs.renderFile('./views/signup.ejs');
     const token = req.cookies.auth_token;
     if(token){
         const encripted_info = security.substitutionDecoder(String((JSON.parse(token))?.token), 'security');
@@ -269,7 +270,7 @@ app.get('/', async (req, res) => {
     }else{
         // header = await ejs.renderFile('./views/header.ejs', {displayMode: 'only signup'});
     }
-    res.status(200).render('landing',{nonce: nonce, isHosted, header});
+    res.status(200).render('landing',{nonce: nonce, isHosted, header, signup});
 });
 
 app.get('/varchar', (req, res) => {

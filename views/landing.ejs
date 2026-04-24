@@ -123,25 +123,62 @@
                     <h3>Welcome to M2T2</h3>
                     <h5>Login to your account</h5>
                     <div class="form-group mb-3">
-                        <input type="email" class="form-control" id="useremail" placeholder="Enter User Id or Email Id" required/>
+                        <input type="email" class="form-control" id="l-useremail" placeholder="Enter User Id or Email Id" required/>
                     </div>
                     <div class="form-group mb-3">
-                        <input type="password" class="form-control" id="userpassword" placeholder="Enter Password" required/>
+                        <input type="password" class="form-control" id="l-userpassword" placeholder="Enter Password" required/>
                     </div>
                     <div class="form-group mb-3">
-                        <select class="form-select form-control" aria-label="Disabled select" id="usertype" disabled>
+                        <select class="form-select form-control" aria-label="Disabled select" id="l-usertype" disabled>
                             <option value="student" selected>Student</option>
                             <option value="teacher">Teacher</option>
                             <option value="admin">Admin</option>
                         </select>
                     </div>
                     <div class="btn btn-process btn-lg btn-block" id="login" onclick="login();">Login</div>
+                    <div class="btn btn-outline-dark btn-lg btn-block" id="noaccount" onclick="accessSignup();">I don't have any account</div>
                     <div class="helping flx"><span onclick="accessContent();">Back to User Type Select</span><span onclick="route('/forgot_password');">Forgot Password</span></div>
                     <div class="error"></div>
                 </div>
             </div>
+            <div class="component right-component accessSignup">
+                <div class="labeling">
+                    <img src="../public/favicon.ico" alt="m2t2"/>
+                    <p>MOCK MANTRA</p>
+                </div>
+                <div class="signup-form ">
+                    <div class="flx">
+                        <span>
+                            <h3>Welcome to M2T2</h3>
+                            <h5>Create your account as a <strong id="s-type" onclick="toggleUser();">Student</strong></h5>
+                            <div class="title"></div>
+                        </span>
+                        <div class="btn btn-outline-secondary" onclick="accessContent();">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
+                                <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"/>
+                                <path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117M11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z"/>
+                            </svg>
+                            Back
+                        </div>
+                    </div>
+                    <%- signup %>
+                </div>
+            </div>
         </section>
     </main>
+    <div class="blbg waitpopup" id="waitpopup">
+        <div class="popup">
+            <div class="wait-icon">
+                <% if (isHosted) { %>
+                    <img src="https://ai-dictionary.github.io/superaitutor/assets/images/clock.webp" alt="loading"/>
+                <% } else { %>
+                    <img src="../assets/images/clock.webp" alt="loading"/>
+                <% } %>
+            </div>
+            <h4>Creating Your Account</h4>
+            <small class="text-muted">Please do not close this window or click any buttons. Your account is being securely created, and your unique user ID will appear on the screen shortly. This may take a few moments..</small>
+        </div>
+    </div>
 </body>
 <script src="../static/App.js" nonce="<%= nonce %>"></script>
 <script type="application/ld+json" nonce="<%= nonce %>">
@@ -156,8 +193,10 @@
 </script>
 <% if (isHosted) { %>
     <script src="https://ai-dictionary.github.io/m2t2/assets/scripts/landing.js" nonce="<%= nonce %>"></script>
+    <script src="https://ai-dictionary.github.io/m2t2/assets/scripts/signup.js" nonce="<%= nonce %>"></script>
 <% } else { %>
     <script src="../assets/scripts/landing.js" nonce="<%= nonce %>"></script>
+    <script src="../assets/scripts/signup.js" nonce="<%= nonce %>"></script>
 <% } %>
 <script nonce="<%= nonce %>">
     window.isHosted = "<%= isHosted %>";

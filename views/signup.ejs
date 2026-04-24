@@ -1,0 +1,337 @@
+<div class="form-box">
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="userName">Full Name</label>
+                <input type="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter your full name" required />
+                <small id="nameHelp" class="form-text text-muted">Please enter your full name as it appears on official
+                    documents. This helps us verify your identity and keep your account secure.</small>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" id="gender" aria-describedby="genderHelp" required>
+                    <option value="Male">Male</option>
+                    <option value="Female" selected>Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <small id="genderHelp" class="form-text text-muted">Select the gender you identify with. This information helps us personalize your experience and maintain accurate records.</small>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="contact">Contact Number (WhatsApp Preferred)</label>
+                <input type="tel" class="form-control" id="contact" maxlength="10" aria-describedby="contactHelp" placeholder="Enter your contact number" required />
+                <small id="contactHelp" class="form-text text-muted">Enter a valid 10-digit mobile number. Preferably one linked to WhatsApp for faster communication and updates.</small>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email id" required />
+                <small id="emailHelp" class="form-text text-muted">Provide an active email address you check regularly. We'll use it to send important updates and account-related information.</small>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="student-signup">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="parentName">Parent's Full Name</label>
+                    <input type="text" class="form-control s-d" id="parent_name" placeholder="Enter your parent's full name" required />
+                    <small id="parentNameHelp" class="form-text text-muted">Please enter the full name of your parent or guardian as listed on official documents.</small>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="relationship">Relationship with Parent</label>
+                    <select class="form-control s-d" id="relationship" required>
+                        <option value="Father" selected>Father</option>
+                        <option value="Mother">Mother</option>
+                        <option value="Grandfather">Grandfather</option>
+                        <option value="Grandmother">Grandmother</option>
+                        <option value="Uncle">Uncle</option>
+                        <option value="Aunt">Aunt</option>
+                        <option value="Brother">Brother</option>
+                        <option value="Sister">Sister</option>
+                        <option value="Husband">Husband</option>
+                        <option value="Legal Guardian">Legal Guardian</option>
+                        <option value="Foster Parent">Foster Parent</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <small id="relationshipHelp" class="form-text text-muted">Choose the relationship that best describes your connection to the listed parent or guardian.</small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="parentContact">Parent's Contact Number</label>
+                    <input type="tel" class="form-control s-d" id="parent_contact" maxlength="10" placeholder="Enter parent's contact number" required />
+                    <small id="parentContactHelp" class="form-text text-muted">Enter a valid 10-digit mobile number. Preferably one linked to WhatsApp for faster communication.</small>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="pin">PIN Code</label>
+                    <input type="number" class="form-control s-d" id="pin" maxlength="6" aria-describedby="pinHelp" placeholder="Enter your pin code" required />
+                    <small id="pinHelp" class="form-text text-muted">Enter your 6-digit area PIN code to help us verify your location and ensure accurate regional support.</small>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="currentClass">Current Class</label>
+                    <select class="form-control s-d" id="class" required>
+                        <option value="6">Class 6</option>
+                        <option value="7">Class 7</option>
+                        <option value="8">Class 8</option>
+                        <option value="9">Class 9</option>
+                        <option value="10" selected>Class 10</option>
+                        <option value="11">Class 11</option>
+                        <option value="12">Class 12</option>
+                        <option value="Bachelor">Bachelor's Degree</option>
+                        <option value="Diploma">Diploma / Certification</option>
+                        <option value="Master">Master's Degree</option>
+                        <option value="PhD">PhD / Doctorate</option>
+                        <option value="Post Doctoral">Postdoctoral Research</option>
+                        <option value="Gap Year">Gap Year</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <small id="classHelp" class="form-text text-muted">Select your current academic class or program</small>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="academicStream">Academic Stream / Major</label>
+                    <select class="form-control s-d" id="stream" required>
+                        <option value="Not Applicable">Not Applicable</option>
+                        <option value="Science" selected>Science</option>
+                        <option value="Commerce">Commerce</option>
+                        <option value="Arts">Arts / Humanities</option>
+                        <option value="Vocational">Vocational Studies</option>
+                        <option value="Engineering">Engineering (e.g., Mechanical, Electrical, Civil)</option>
+                        <option value="Computer Science">Computer Science / IT</option>
+                        <option value="Business">Business Administration / Management</option>
+                        <option value="Economics">Economics</option>
+                        <option value="Accounting">Accounting / Finance</option>
+                        <option value="Law">Law / Legal Studies</option>
+                        <option value="Medicine">Medicine / MBBS</option>
+                        <option value="Nursing">Nursing / Allied Health</option>
+                        <option value="Pharmacy">Pharmacy</option>
+                        <option value="Architecture">Architecture</option>
+                        <option value="Education">Education / B.Ed</option>
+                        <option value="Psychology">Psychology</option>
+                        <option value="Sociology">Sociology</option>
+                        <option value="Political_science">Political Science</option>
+                        <option value="History">History</option>
+                        <option value="Literature">English / Literature</option>
+                        <option value="Media Communication">Mass Communication / Journalism</option>
+                        <option value="Fine Arts">Fine Arts / Performing Arts</option>
+                        <option value="Agriculture">Agricultural Sciences</option>
+                        <option value="Environmental">Environmental Science</option>
+                        <option value="Statistics">Statistics / Mathematics</option>
+                        <option value="Foreign Languages">Foreign Languages</option>
+                        <option value="Hotel Management">Hotel Management / Hospitality</option>
+                        <option value="Fashion Design">Fashion Design</option>
+                        <option value="Interior Design">Interior Design</option>
+                        <option value="Animation">Animation / Multimedia</option>
+                        <option value="Culinary">Culinary Arts</option>
+                        <option value="Sports Science">Sports Science / Physical Education</option>
+                        <option value="Data Science">Data Science / AI / ML</option>
+                        <option value="Cybersecurity">Cybersecurity</option>
+                        <option value="Not Decided">Undecided / Exploring Options</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <small id="streamHelp" class="form-text text-muted">Choose your current academic stream or major subject area</small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="institutionName">Current Institution</label>
+                    <input type="text" class="form-control s-d" id="institute" aria-describedby="institutionHelp" placeholder="Enter the name of your school or college or board" required />
+                    <small id="institutionHelp" class="form-text text-muted">Please provide the full name of your current educational institution (School/College/University/Board Name) for academic feedback</small>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="examPrep">Competitive Exams Preparing For</label>
+                    <select class="form-control s-d" id="exam_prep" required>
+                        <option value="Board Exam">Board Exams (10th / 12th)</option>
+                        <option value="CUET">CUET (Central University Entrance Test)</option>
+                        <option value="JEE">JEE (Joint Entrance Exam)</option>
+                        <option value="NEET">NEET (Medical Entrance)</option>
+                        <option value="UPSC">UPSC (Civil Services)</option>
+                        <option value="SSC">SSC (Staff Selection Commission)</option>
+                        <option value="Railway">Railway Recruitment Exams</option>
+                        <option value="Banking">Banking Exams (IBPS, SBI PO, etc.)</option>
+                        <option value="State PSC">State PSC Exams</option>
+                        <option value="CAT">CAT (MBA Entrance)</option>
+                        <option value="GATE">GATE</option>
+                        <option value="GMAT">GMAT</option>
+                        <option value="GRE">GRE</option>
+                        <option value="TOEFL">TOEFL / IELTS</option>
+                        <option value="Not Preparing" selected>Not Preparing for Any Exam</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <small class="form-text text-muted">Select the exam(s) you're currently preparing for or planning to attempt, if not then select the NA option</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="teacher-signup">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="pin">PIN Code</label>
+                    <input type="number" class="form-control t-d" id="pin" maxlength="6" aria-describedby="pinHelp" placeholder="Enter your pin code" required />
+                    <small id="pinHelp" class="form-text text-muted">Enter your 6-digit area PIN code to help us verify your location and ensure accurate regional support.</small>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="emergency_contact">Emergency Contact Number</label>
+                    <input type="tel" class="form-control t-d" id="emergency_contact" maxlength="10" placeholder="Enter alternative contact number" aria-describedby="emergency_contactHelp" required />
+                    <small id="emergency_contactHelp" class="form-text text-muted">Enter a valid 10-digit WhatsApp number. Preferably one linked to WhatsApp for emergency communication but different with Contact number.</small>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="high_degree">Highest Degree Completed</label>
+                    <select class="form-control t-d" id="high_degree" aria-describedby="high_degreeHelp" required>
+                        <option value="12">Class 12</option>
+                        <option value="BA">Bachelor of Arts (BA)</option>
+                        <option value="BSc">Bachelor of Science (BSc)</option>
+                        <option value="BCom">Bachelor of Commerce (BCom)</option>
+                        <option value="BBA">Bachelor of Business Administration (BBA)</option>
+                        <option value="B.Ed" selected>Bachelor of Education (B.Ed)</option>
+                        <option value="B.Tech">Bachelor of Technology (B.Tech)</option>
+                        <option value="LLB">Bachelor of Laws (LLB)</option>
+                        <option value="MBBS">Bachelor of Medicine, Bachelor of Surgery (MBBS)</option>
+                        <option value="MA">Master of Arts (MA)</option>
+                        <option value="MSc">Master of Science (MSc)</option>
+                        <option value="MCom">Master of Commerce (MCom)</option>
+                        <option value="MBA">Master of Business Administration (MBA)</option>
+                        <option value="M.Ed">Master of Education (M.Ed)</option>
+                        <option value="M.Tech">Master of Technology (M.Tech)</option>
+                        <option value="LLM">Master of Laws (LLM)</option>
+                        <option value="MD">Doctor of Medicine (MD)</option>
+                        <option value="MS">Master of Surgery (MS)</option>
+                        <option value="PhD">Doctor of Philosophy (Ph.D)</option>
+                        <option value="EdD">Doctor of Education (Ed.D)</option>
+                        <option value="D.Sc">Doctor of Science (D.Sc)</option>
+                        <option value="Post Doctoral">Postdoctoral Research</option>
+                        <option value="Diploma">Diploma / Advanced Diploma</option>
+                        <option value="PG Diploma">Postgraduate Diploma</option>
+                        <option value="Professional Certification">Professional Certification (e.g., TEFL, CA, CS, CFA)</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <small id="high_degreeHelp" class="form-text text-muted">Select the highest academic or professional qualification you've completed for attract students</small>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="experience">Total Years of Teaching Experience</label>
+                    <input type="number" class="form-control t-d" id="experience" name="experience" min="0" max="40" placeholder="Enter the years of Experience time" aria-describedby="experienceHelp" required />
+                    <small id="experienceHelp" class="form-text text-muted">Enter the total number of years you've spent teaching. You can enter 0 if you're just starting out.</small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="subject">Specialized Subject(s)</label>
+                    <select class="form-control t-d" id="subject" aria-describedby="subjectHelp" multiple required>
+                        <option value="Mathematics" selected>Mathematics</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Biology">Biology</option>
+                        <option value="English">English</option>
+                        <option value="History">History</option>
+                        <option value="Geography">Geography</option>
+                        <option value="Political Science">Political Science</option>
+                        <option value="Economics">Economics</option>
+                        <option value="Sociology">Sociology</option>
+                        <option value="Psychology">Psychology</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Sanskrit">Sanskrit</option>
+                        <option value="Bengali">Bengali</option>
+                        <option value="Fine Arts">Fine Arts</option>
+                        <option value="Music">Music</option>
+                        <option value="Drama">Drama / Theatre Studies</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Data Science/AI/ML">Data Science/AI/ML</option>
+                        <option value="Information Technology">Information Technology</option>
+                        <option value="Commerce">Commerce</option>
+                        <option value="Business Studies">Business Studies</option>
+                        <option value="Accountancy">Accountancy</option>
+                        <option value="Physical Education">Physical Education</option>
+                        <option value="Environmental Science">Environmental Science</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <small id="subjectHelp" class="form-text text-muted">Choose the subject(s) you specialize in for teaching or academic work. Use <code>Ctrl + Click</code> for computers/laptop.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="createPassword">Create Password</label>
+                <input type="password" class="form-control" id="pass" placeholder="Enter a secure password" required />
+                <small class="form-text text-muted">
+                    Create a strong password to safeguard your account and sensitive information. Your password must be
+                    <ul>
+                        <li>at least 8 characters long,</li>
+                        <li>include at least one uppercase letter (A-Z),</li>
+                        <li>one lowercase letter (a-z),</li>
+                        <li>one number (0-9), and</li>
+                        <li>one special symbol (@,#,!,&,$,?,*).</li>
+                    </ul>
+                    Make sure to remember the password you create, as it will be required for future access.
+                </small>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Re-enter your password" required />
+                <small class="form-text text-muted">Make sure this matches the password you entered above for secure your account.</small>
+            </div>
+        </div>
+    </div>
+    <div class="row form-group" style="color: #070700; text-align: left; padding-left: 20px;">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="iagree" value="i agree" checked>
+            <label class="form-check-label" for="iagree">I agree to the SAIT's Terms and Service</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group contract">
+            <small class="text-muted">
+                By checking this box, I acknowledge that I have carefully read and understood
+                the <a href="https://superaitutor.vercel.app/legal">Terms of Service and Privacy Policy</a>
+                of SAIT (Super AI Tutor).
+                I affirm that the information provided in this registration form is accurate,
+                complete, and submitted in good faith to the best of my knowledge. I hereby
+                consent to all stated terms and conditions, and confirm that this submission
+                is made voluntarily, with full awareness and without any form of coercion or
+                misrepresentation.</small>
+        </div>
+    </div>
+    <div class="flx" style="justify-content: center;">
+        <div class="btn btn-outline-success submit" onclick="signup();">Save & Submit</div>
+    </div>
+</div>
