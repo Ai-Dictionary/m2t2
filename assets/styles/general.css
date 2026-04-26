@@ -1,4 +1,6 @@
 .analysis{
+    max-height: 100vh;
+    overflow: auto;
     h3{
         font-size: 1.2rem;
         font-family: sans-serif;
@@ -158,18 +160,73 @@
     .timeline-intro{
         width: 95%;
         margin: 20px auto;
-        .header{
-            h3{
-                font-size: 1rem;
-                text-align: left;
+        .left-component, .right-component{
+            .header{
+                h3{
+                    font-size: 1rem;
+                    text-align: left;
+                }
+                select{
+                    width: fit-content;
+                    border-radius: 50px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    border: none;
+                    cursor: pointer;
+                }
             }
-            select{
-                width: fit-content;
-                border-radius: 50px;
-                font-size: 14px;
-                font-weight: 500;
-                border: none;
+            .body{
+                margin: 20px 0px;
             }
+        }
+        .left-component{
+            width: 35%;
+            .body{
+                .cal-head{
+                    margin: 8px 0px;
+                    font-family: sans-serif;
+                    font-size: 14px;
+                    background: white;
+                    padding: 8px 2px;
+                    border-radius: 50px;
+                    .head{
+                        width: calc(100% / 7);
+                        text-align: center;
+                        cursor: default;
+                        user-select: none;
+                        border-right: 0.5px solid grey;
+                    }
+                    .head:nth-last-child(1){
+                        border: none;
+                    }
+                }
+                .cal-date{
+                    display: grid;
+                    grid-template-columns: repeat(7, 1fr);
+                    gap: 5px;
+                    font-size: 12px;
+                    font-family: monospace;
+                    text-align: center;
+                    .date{
+                        background: #fff;
+                        border-radius: 50px;
+                        width: fit-content;
+                        padding: 18px 10px 4px 10px;
+                        margin: 0px auto;
+                        cursor: pointer;
+                    }
+                    .date:hover{
+                        background: var(--myellow);
+                    }
+                    .todate{
+                        background: #c09761;
+                        color: #fff;
+                    }
+                }
+            }
+        } 
+        .right-component{
+            width: 55%;
         }
     }
 }

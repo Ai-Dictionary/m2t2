@@ -21,13 +21,15 @@
     }
     .page{
         width: 80%;
+        max-height: 100%;
+        overflow: hidden;
         background: linear-gradient(45deg, #D8DBE1, #EFF1F5);
     }
 }
 .sidebar-nav .nav-list {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 10px;
     padding: 0 15px;
     flex-direction: column;
     transform: translateY(15px);
@@ -71,7 +73,7 @@
 .sidebar-nav .nav-item:is(:hover, .open)>.nav-link:not(.dropdown-title) {
     color: #151A2D;
     background: #f0f5b6;
-    border-radius: 50%;
+    border-radius: 5px;
 }
 
 .sidebar .nav-link .nav-label {
@@ -117,7 +119,7 @@
     .sidebar{
         position: absolute;
         bottom: 2%;
-        left: 15%;
+        left: 20%;
         width: max-content!important;
         height: 50px;
         overflow: hidden;
@@ -140,6 +142,9 @@
         .sidebar-nav .nav-item .nav-link{
             padding: 12px;
         }
+    }
+    .sidebar-nav .nav-item:is(:hover, .open)>.nav-link:not(.dropdown-title) {
+        border-radius: 50%;
     }
 }
 
