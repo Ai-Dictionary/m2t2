@@ -214,6 +214,7 @@
                         padding: 18px 10px 4px 10px;
                         margin: 0px auto;
                         cursor: pointer;
+                        user-select: none;
                     }
                     .date:hover{
                         background: var(--myellow);
@@ -221,6 +222,12 @@
                     .todate{
                         background: #c09761;
                         color: #fff;
+                    }
+                    .nodate{
+                        background: transparent;
+                    }
+                    .nodate:hover{
+                        background: whitesmoke;
                     }
                 }
             }

@@ -25,7 +25,7 @@ function accessSignup(){
     document.querySelector('.accessContent').style.display = "none";
     document.querySelector('.accessLogin').style.display = "none";
     document.querySelector('.accessSignup').style.display = "block";
-    document.getElementById('s-type').textContent = (window.user_type=='admin'?'student':window.user_type) || 'teacher';
+    document.getElementById('s-type').textContent = (window.user_type=='admin'?'student':window.user_type) || 'student';
     if(document.getElementById('s-type').textContent == 'student'){
         document.querySelector('.student-signup').style.display = 'block';
         document.querySelector('.teacher-signup').style.display = 'none';
@@ -45,7 +45,7 @@ function toggleUser(){
 }
 
 // accessLogin();
-accessSignup();
+// accessSignup();
 
 document.addEventListener("DOMContentLoaded", function () {
     const userTypes = document.querySelectorAll(".usertype");

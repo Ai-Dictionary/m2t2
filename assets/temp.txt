@@ -29,3 +29,61 @@ Relation
 6. Date - Time - Location []
 7. 
 
+
+<div class="body">
+  <div class="calender-month">
+    <div class="cal-head flx">
+      <div class="head">Sun</div>
+      <div class="head">Mon</div>
+      <div class="head">Tue</div>
+      <div class="head">Wed</div>
+      <div class="head">Thu</div>
+      <div class="head">Fri</div>
+      <div class="head">Sat</div>
+    </div>
+    <div class="cal-date" id="cal-date"></div>
+  </div>
+</div>
+
+<script>
+function today_class(day) {
+  alert("You clicked date: " + day);
+}
+
+function generateCalendar() {
+  const calDate = document.getElementById("cal-date");
+  calDate.innerHTML = ""; // clear old content
+
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = today.getMonth(); // 0-based
+  const firstDay = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+  // Fill empty slots before 1st day
+  for (let i = 0; i < firstDay; i++) {
+    calDate.innerHTML += `<div class="date nodate"><div class="d"></div><div class="c">...</div></div>`;
+  }
+
+  // Fill actual days
+  for (let d = 1; d <= daysInMonth; d++) {
+    const isToday = d === today.getDate();
+    calDate.innerHTML += `
+      <div class="date ${isToday ? "todate" : ""}" onclick="today_class(${d});">
+        <div class="d">${String(d).padStart(2,"0")}</div>
+        <div class="c">...</div>
+      </div>`;
+  }
+
+  // Fill remaining slots to complete the grid (optional)
+  const totalCells = firstDay + daysInMonth;
+  const extra = 7 - (totalCells % 7);
+  if (extra < 7) {
+    for (let i = 0; i < extra; i++) {
+      calDate.innerHTML += `<div class="date nodate"><div class="d"></div><div class="c">...</div></div>`;
+    }
+  }
+}
+
+generateCalendar();
+</script>

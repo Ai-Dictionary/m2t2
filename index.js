@@ -302,6 +302,24 @@ app.post('/create_account', async (req, res) => {
     }
 });
 
+app.get('/accountCreated', async (req, res) => {
+    const nonce = res.locals.nonce;
+    const isHosted = hex.isHosted(req);
+    let queryParams = new URLSearchParams(decodeURIComponent(req.originalUrl).split('?')[1]);
+    if(queryParams.has('encode')){
+        let decoded_url = security.substitutionDecoder(decodeURIComponent(req.originalUrl).split('?encode=')[1], String(varchar.public_key));
+        queryParams = new URLSearchParams(decoded_url);
+    }
+    const name = queryParams.get('name');
+    const id = queryParams.get('id');
+    const email = queryParams.get('email');
+    if(name == null || email == undefined || id == ''){
+        res.status(400).render('notfound',{error: 404, message: "Page not found on this url, check the provided information for create account is valid and submit successfully or report it"});
+    }else{
+        res.status(200).render('accountCreated',{nonce: nonce, id, email, name, isHosted});
+    }
+});
+
 app.get('/main', async (req, res) => {
     try{
         const nonce = res.locals.nonce;

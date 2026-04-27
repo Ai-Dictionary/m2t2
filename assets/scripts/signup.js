@@ -18,7 +18,7 @@ class SIGNUP{
                 if(response.ok){
                     if(result.id){
                         console.log('Account created successfully. Your ID:', result.id);
-                        route('https://superaitutor.vercel.app/accountCreated?encode='+encodeURIComponent(system.encoder(`name=${formData.name.replaceAll(' ','%20')}&email=${formData.email}&id=${result.id}`,'1441')));
+                        route('/accountCreated?encode='+encodeURIComponent(system.encoder(`name=${formData.name.replaceAll(' ','%20')}&email=${formData.email}&id=${result.id}`,'1441')));
                     }else if(result.message){
                         console.warn('Server responded with a message:', result.message);
                         document.getElementById("waitpopup").style.display = "none";

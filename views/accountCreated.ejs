@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="m2t2">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Ai-Dictionary/m2t2/main/public/logo1500.png" name="og:image">
+    <meta itemprop="image" content="https://m2t2.vercel.app/public/logo1500.png">
+    <meta property="og:site_name" content="m2t2">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/Ai-Dictionary/m2t2/main/public/logo1500.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="m2t2">
+    <meta name="description" content="MockMantra TimeTable is an AI-powered education platform offering doubt solving, live classes, exam prep, career guidance, and progress tracking for students, teachers, and parents.">
+    <meta content="M2T2, MockMantra TimeTable, time scheduler, super ai, mock mantra, table, progress track, project, JPEN, Ai Dictionary" lang="en-us" name="keywords">
+    <title version="1.0">Congratulation - M2T2</title>
+    <meta name="author" content="Ai-Dictionary">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/Ai-Dictionary/m2t2/main/public/favicon.ico">
+    <link rel="icon" href="https://mockmantra.in/static/media/wl_client_images/50635ffb95b540c0862b89a3b8325031.png" sizes="192x192">
+    <link rel="alternate" type="application/rss+xml" title="MockMantraTimeTable » Feed" href="https://m2t2.com/feed/">
+    <link rel="alternate" type="application/rss+xml" title="MockMantraTimeTable » Comments Feed" href="https://m2t2.com/comments/feed/">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/App.css"/>
+    <% if (isHosted) { %>
+        <link rel="stylesheet" href="https://ai-dictionary.github.io/m2t2/assets/styles/main.css"/>
+    <% } else { %>
+        <link rel="stylesheet" href="../assets/styles/main.css"/>
+    <% } %>
+</head>
+<style>
+    .account{
+        width: 60%;
+        margin: 10% auto;
+        background: var(--lavender);
+        padding: 5% 20px;
+        text-align: center;
+        border-radius: 10px;
+        h3{
+            text-transform: capitalize;
+        }
+        .flx{
+            width: 60%;
+            margin: 25px auto;
+            color: slategray;
+        }
+        .btn-holder .btn{
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+    }
+    canvas{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        z-index: 90;
+    }
+    /* Mobile view */
+    @media only screen and (max-width: 900px), only screen and (min-width: 900px) and (max-width: 1200px) {
+        .account{
+            width: 95%;
+            .flx{
+                width: 90%;
+            }
+        }
+    }
+</style>
+<body>
+    <main class="workspace" id="main">
+        <section class="account">
+            <h3>Congratulation, <span id="name"><%= name %></span></h3>
+            <small class="text-muted">Your account on M2T2 is created successfully with your given data</small>
+            <div class="flx"><p>Your User Id: </p><p id="id"><%= id %></p></div>
+            <div class="flx"><p>Your Email Id: </p><p id="email"><%= email %></p></div>
+            <small>Don't share your creadintials information with any one on any condition, your user id and password is use to unlock your account.</small>
+            <div class="btn-holder"><div class="btn btn-process" onclick="route('/');">Continue with Login</div><div class="btn btn-outline-process" onclick="route('https:/\/superaitutor.vercel.app/docs?search=userid');">Learn about User ID</div></div>
+        </section>
+    </main>
+    <canvas id="vanillaConfettiCanvas"></canvas>
+</body>
+<script src="../static/App.js" nonce="<%= nonce %>"></script>
+<% if (isHosted) { %>
+    <script src="https://ai-dictionary.github.io/superaitutor/assets/scripts/accountCreated.js" nonce="<%= nonce %>"></script>
+<% } else { %>
+    <script src="../assets/scripts/accountCreated.js" nonce="<%= nonce %>"></script>
+<% } %>
+<script nonce="<%= nonce %>">
+setTimeout(() => {
+    generateConfetti({
+        colorsArray: ["#D1FFA3", "#FFE161", "#CF86FF", "#DD1300", "#61DCC5", "rgba(215, 185, 255, 1)"],
+        velocity: 0.025,
+        quantity: 750,
+        minSize: 4,
+        maxSize: 12,
+        minOpacity: 0.75,
+        maxOpacity: 1,
+        infiniteLoop: false
+    }, "vanillaConfettiCanvas");
+    downloadCredentials(document.getElementById('id').textContent, document.getElementById('name').textContent, document.getElementById('email').textContent);
+}, 2500);
+function downloadCredentials(id, name, email) {
+    const data = {
+        company: "Mock Mantra",
+        site: window.location.origin,
+        user: {
+            name,
+            email,
+            id,
+            type: id.startsWith('AID')?'Student':id.startsWith('UID')?'Teacher':'Undefine'
+        },
+        feedback: "mockmantra24@gmail.com",
+        time: new Date().getTime()
+    };
+    const jsonString = JSON.stringify(data, null, 2);
+    const blob = new Blob([jsonString], { type: "application/json;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "SAIT_Credentials.json";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+}
+</script>
+</html>
