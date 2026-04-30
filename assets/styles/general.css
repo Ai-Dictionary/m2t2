@@ -163,7 +163,7 @@
         .left-component, .right-component{
             .header{
                 h3{
-                    font-size: 1rem;
+                    font-size: 1.1rem;
                     text-align: left;
                 }
                 select{
@@ -234,6 +234,66 @@
         } 
         .right-component{
             width: 55%;
+            .body{
+                padding-top: 10px;
+                .class-time{
+                    width: 100%;
+                    .left-component{
+                        width: fit-content;
+                        padding: 8px 10px;
+                        font-size: 16px;
+                        font-family: sans-serif;
+                        font-weight: 500;
+                        padding-top: 0px;
+                        margin-top: -12px;
+                    }
+                    .right-component{
+                        width: 80%;
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        column-gap: 8px;
+                        padding: 16px 0px;
+                        border-bottom: 1px solid slategrey;
+                        .class{
+                            background: #fff;
+                            width: fit-content;
+                            min-width: 250px;
+                            padding: 2px 4px;
+                            border-radius: 50px;
+                            height: fit-content;
+                            padding: 3px 4px 3px 3px;
+                            cursor: pointer;
+                            .class-logo{
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                                background: antiquewhite;
+                                text-align: center;
+                                padding: 5px;
+                            }
+                            .class-info{
+                                width: 60%;
+                                padding: 2px 0px;
+                                .class-name{
+                                    font-size: 12px;
+                                    font-family: sans-serif;
+                                    font-weight: bolder;
+                                }
+                                .class-loc{
+                                    font-size: 10px;
+                                    color: grey;
+                                }
+                            }
+                            .class-ico{
+                                width: 20%;
+                                padding: 2px 0px;
+                                text-align: center;
+                                color: slategray;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

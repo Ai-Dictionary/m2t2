@@ -37,7 +37,7 @@ function generateCalendar() {
     for (let d = 1; d <= daysInMonth; d++) {
         const isToday = d === today.getDate();
         calDate.innerHTML += `
-      <div class="date ${isToday ? "todate" : ""}" onclick="today_class(${d}, ${firstDay});">
+      <div class="date ${isToday ? "todate" : ""}" onclick="today_class(${d}, ${firstDay});" title="${String(d).padStart(2, "0")}/${String(month+1).padStart(2, "0")}/${String(year).padStart(2, "0")}">
         <div class="d">${String(d).padStart(2, "0")}</div>
         <div class="c" style="opacity:${d%2==0?1:0};">...</div>
       </div>`;
