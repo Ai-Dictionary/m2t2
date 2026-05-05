@@ -24,6 +24,7 @@
         max-height: 100%;
         overflow: hidden;
         background: linear-gradient(45deg, #D8DBE1, #EFF1F5);
+        background: #f4f4f4;
     }
 }
 .sidebar-nav .nav-list {
@@ -125,6 +126,9 @@
         overflow: hidden;
         padding: 0px 10px;
         border-radius: 50px;
+        background: #ffffffc0!important;
+        backdrop-filter: blur(4px);
+        box-shadow: 0 0 2px 1px grey;
         .sidebar-header{
             display: none;
         }

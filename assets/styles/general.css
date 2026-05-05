@@ -236,6 +236,7 @@
             width: 55%;
             .body{
                 padding-top: 10px;
+                overflow-x: hidden;
                 .class-time{
                     width: 100%;
                     .left-component{
@@ -362,6 +363,23 @@
                             width: 150%;
                             margin-top: 5%;
                             margin-left: -12%;
+                        }
+                    }
+                }
+            }
+        }
+        .timeline-intro{
+            flex-direction: column;
+            .left-component, .right-component{
+                width: 100%;
+            }
+            .right-component{
+                .body {
+                    padding-bottom: 40px;
+                    .class-time {
+                        .right-component{
+                            grid-template-columns: repeat(1, 1fr);
+                            row-gap: 8px;
                         }
                     }
                 }
