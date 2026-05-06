@@ -1,0 +1,12 @@
+.calendar{
+    max-height: 100vh;
+    overflow: auto;
+    h3{
+        font-size: 1.2rem;
+        font-family: sans-serif;
+        font-weight: 600;
+        text-align: center;
+        margin: 10px 0px;
+        user-select: none;
+    }
+}

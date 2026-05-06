@@ -53,7 +53,7 @@ class PageRouter {
                 }
                 const container = document.getElementById('page-content');
                 if (container) {
-                    container.innerHTML = template.innerHTML!='undefined'?template.innerHTML:(this.isHosted()?"<img src='https://ai-dictionary.github.io/m2t2/assets/images/404.webp' alt='m2t2' class='Img404'/>":"<img src='../assets/images/404.webp' alt='m2t2' class='Img404'/>");
+                    container.innerHTML = (template.innerHTML=='undefined' || template.innerHTML == '')?(this.isHosted()?"<img src='https://ai-dictionary.github.io/m2t2/assets/images/404.webp' alt='m2t2' class='Img404'/>":"<img src='../assets/images/404.webp' alt='m2t2' class='Img404'/>"):template.innerHTML;
                     this.loadAssets(pageId);
                     this.currentPage = `${pageId}-template`;
                     history.pushState({}, '', `/main?page=${pageId}`);
@@ -64,6 +64,24 @@ class PageRouter {
                         // general.performanceGraph();
                     },1000);
                 }
+                const visited_page = this.pageVisit.find(item => item.id === `${pageId}-template`) || null;
+                if(visited_page?.visit >= 1){
+                    const labels = document.querySelectorAll('.nav-item .nav-link .nav-label');
+                    const idx = Array.from(labels).findIndex(label => label.textContent.trim().toLowerCase() === pageId);
+                    document.querySelectorAll('.nav-item').forEach((item, i) => {
+                        if (i === idx) {
+                            item.classList.add('open');
+                        }else{
+                            item.classList.remove('open');
+                        }
+                    });
+                }
+            }else{
+                const container = document.getElementById('page-content');
+                container.innerHTML = this.isHosted()?"<img src='https://ai-dictionary.github.io/m2t2/assets/images/404.webp' alt='m2t2' class='Img404'/>":"<img src='../assets/images/404.webp' alt='m2t2' class='Img404'/>";
+                document.querySelectorAll('.nav-item').forEach((item, i) => {
+                    item.classList.remove('open');
+                });
             }
         } catch (e) {
             console.error(`Oops! Some page is not set for "${pageId}" due to an error:\n`, e);
@@ -128,3 +146,6 @@ class Process{
 
 const router = new PageRouter();
 window.loadPage = (pageId) => router.loadPage(pageId);
+
+
+// sidenav color change when click .. need to work

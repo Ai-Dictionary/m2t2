@@ -348,9 +348,10 @@ app.get('/main', async (req, res) => {
                 // res.status(200).send(`<section style="text-align: center; margin: 10% auto; font-family: sans-serif;"><h1>Welcome User (${email_id}) nice to meet you!</h1><p>Currently we can\'t provide you a web interface, because M2T2 is under develoment, hope you understand.</p><pre style="text-align: left;">${JSON.stringify(profile_info, null, 2)}</pre></section>`);
                 const promises = [
                     ejs.renderFile('./views/general.ejs', {isHosted, profile_info, type: "student", edge_request: varchar.ipHits[clientIP]}),
+                    ejs.renderFile('./views/calendar.ejs', {isHosted, profile_info, type: "student"}),
                 ];
-                Promise.all(promises).then(([general]) => {
-                    res.status(200).render('main', {nonce: nonce, isHosted, user: {name: profile_info.name, bg: hex.generateBGColor(profile_info.name, profile_info.email), type: 'student'}, general});
+                Promise.all(promises).then(([general, calendar]) => {
+                    res.status(200).render('main', {nonce: nonce, isHosted, user: {name: profile_info.name, bg: hex.generateBGColor(profile_info.name, profile_info.email), type: 'student'}, general, calendar});
                 });
         //     }else{
         //         // res.status(419).send(hex.renderHBS(fs, handlebars, 'session_expire', {nonce: nonce})); //Session Expired
